@@ -1,0 +1,83 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"app-plus":{
+					"titleNView":{
+						"searchInput": {
+							"align":"center",
+							"backgroundColor":"#f5f4f2",
+							"borderRadius":"4px",
+							"disabled":true,
+							"placeholder":"搜索帖子",
+							"placeholderColor":"#6d6c67"
+						},
+						"buttons":[
+							{
+								"color":"#333333",
+								"colorPressed":"#bbbbbb",
+								"float":"right",
+								"fontSize":"24px",
+								"fontSrc":"/static/iconfont.ttf",
+								"text":"\ue668"
+							}
+						]
+					}
+				}
+			}
+		}, {
+			"path": "pages/news/news"
+		}, {
+			"path": "pages/msg/msg",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/my/my",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "社区交友",
+		"navigationBarBackgroundColor": "#FFFFFF",
+		"backgroundColor": "#FFFFFF"
+	},
+	"tabBar": {
+		"color": "#323232",
+		"selectedColor": "#111111",
+		"backgroundColor": "#FFFFFF",
+		"borderStyle": "black",
+		"list": [
+				{
+					"pagePath":"pages/index/index",
+					"text":"首页",
+					"iconPath":"static/tabbar/indexed.png",
+					"selectedIconPath":"static/tabbar/index.png"
+				},
+				{
+					"pagePath":"pages/news/news",
+					"text":"动态",
+					"iconPath":"static/tabbar/newsed.png",
+					"selectedIconPath":"static/tabbar/news.png"
+				},		{
+					"pagePath":"pages/msg/msg",
+					"text":"消息",
+					"iconPath":"static/tabbar/messageed.png",
+					"selectedIconPath":"static/tabbar/message.png"
+				},		{
+					"pagePath":"pages/my/my",
+					"text":"我的",
+					"iconPath":"static/tabbar/homeed.png",
+					"selectedIconPath":"static/tabbar/home.png"
+				}
+		]
+	}
+}
