@@ -7,10 +7,11 @@
 			</view>
 		</scroll-view>
 
-		<swiper :duration="150" :current="tabIndex" @change="onChangeTab" :style="'height:'+scrollH+ 'px;'">
+		<swiper @tap.stop :duration="150" :current="tabIndex" @change="onChangeTab" :style="'height:'+scrollH+ 'px;'">
 			<swiper-item v-for="(item,index) in newsList" :key="">
+				
 				<scroll-view scroll-y="true" :style="'height:'+scrollH+ 'px;'" @scrolltolower="loadmore(index)">
-
+				
 					<template v-if="item.list.length > 0">
 						<block v-for="(item02,index02) in item.list" :key="index02">
 							<common-list :item="item02" :index="index02" @follow="follow" @doSupport="doSupport"></common-list>
