@@ -27,7 +27,10 @@
 				}
 			}
 		}, {
-			"path": "pages/news/news"
+			"path": "pages/news/news",
+			"style":{
+				"navigationStyle":"custom"
+			}
 		}, {
 			"path": "pages/msg/msg",
 			"style": {
@@ -43,7 +46,50 @@
 			}
 
 		}
-	],
+	    ,{
+            "path" : "pages/search/search",
+            "style" :                                                                                    
+            {
+                "app-plus":{
+                	"titleNView":{
+                		"searchInput": {
+                			"align":"center",
+                			"backgroundColor":"#f5f4f2",
+                			"borderRadius":"4px",
+                			"placeholder":"搜索帖子",
+                			"placeholderColor":"#6d6c67"
+                		},
+                		"buttons":[
+                			{
+                				"color":"#333333",
+                				"colorPressed":"#bbbbbb",
+                				"float":"right",
+                				"fontSize":"14px",
+                				"text":"搜索"
+                			}
+                		]
+                	}
+                }
+            }
+            
+        }
+        ,{
+            "path" : "pages/add-input/add-input",
+            "style" :                                                                                    
+            {
+                "navigationStyle":"custom"
+            }
+            
+        }
+        ,{
+            "path" : "pages/topic-nav/topic-nav",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "话题分类"
+            }
+            
+        }
+    ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "社区交友",
@@ -78,6 +124,15 @@
 					"iconPath":"static/tabbar/homeed.png",
 					"selectedIconPath":"static/tabbar/home.png"
 				}
+		]
+	},
+	"condition":{
+		"current":0,
+		"list":[
+			{
+				"name":"添加",
+				"path":"pages/add-input/add-input"
+			}
 		]
 	}
 }

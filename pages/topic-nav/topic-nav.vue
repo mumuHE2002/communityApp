@@ -14,9 +14,7 @@
 					<view>
 						<template v-if="item.list.length > 0">
 							<block v-for="(item02,index02) in item.list" :key="index02">
-								<common-list :item="item02" :index="index02" @follow="follow" @doSupport="doSupport"></common-list>
-								<!-- 全局分割线 -->
-								<divider></divider>
+								<topic-list :item="item02" :index="index02"></topic-list>
 							</block>
 						
 							<!-- 上拉加载更多 -->
@@ -37,58 +35,43 @@
 
 <script>
 	const mode = [{
-			username: "乐视挂b", //用户名名称
-			userpic: "/static/demo/topicpic/10.jpeg", //用户头像
-			newstime: "2019-07-01 下午 4:22", //发布时间
-			isFollow: false, //是否关注
-			title: "我是标题", //标题
-			titlepic: "/static/demo/datapic/11.jpg", //标题图片
-			support: {
-				type: "", //支持状态（顶、踩）
-				support_count: 0, //顶 人数
-				unsupport_count: 3 //踩  人数
-			},
-			comment_count: 2, //评论数
-			share_num: 0 //分享数
-		},
-		{
-			username: "呃釰宋", //用户名名称
-			userpic: "/static/demo/topicpic/14.jpeg", //用户头像
-			newstime: "2019-07-01 下午 4:22", //发布时间
-			isFollow: false, //是否关注
-			title: "我是标题", //标题
-			titlepic: "", //标题图片
-			support: {
-				type: "", //支持状态（顶、踩）
-				support_count: 1, //顶 人数
-				unsupport_count: 3 //踩  人数
-			},
-			comment_count: 2, //评论数
-			share_num: 0 //分享数
-		},
-		{
-			username: "何之木木", //用户名名称
-			userpic: "/static/demo/topicpic/12.jpeg", //用户头像
-			newstime: "2019-07-01 下午 4:22", //发布时间
-			isFollow: false, //是否关注
-			title: "我是标题", //标题
-			titlepic: "/static/demo/datapic/12.jpg", //标题图片
-			support: {
-				type: "", //支持状态（顶、踩）
-				support_count: 0, //顶 人数
-				unsupport_count: 0 //踩  人数
-			},
-			comment_count: 0, //评论数
-			share_num: 0 //分享数
-		}
-	]
+					cover:"/static/demo/topicpic/1.jpeg",
+					title:"话题标题2333",
+					desc:"我是描述",
+					today_count:0,
+					news_count:0
+				},{
+					cover:"/static/demo/topicpic/1.jpeg",
+					title:"话题标题2333",
+					desc:"我是描述",
+					today_count:0,
+					news_count:0
+				},{
+					cover:"/static/demo/topicpic/1.jpeg",
+					title:"话题标题2333",
+					desc:"我是描述",
+					today_count:0,
+					news_count:0
+				},{
+					cover:"/static/demo/topicpic/1.jpeg",
+					title:"话题标题2333",
+					desc:"我是描述",
+					today_count:0,
+					news_count:0
+				},{
+					cover:"/static/demo/topicpic/1.jpeg",
+					title:"话题标题2333",
+					desc:"我是描述",
+					today_count:0,
+					news_count:0
+				},]
 
 
-	import commonList from '@/components/common/common-list.vue'
+	import topicList from '@/components/news/topic-list.vue'
 	import loadMore from '@/components/common/load-more.vue';
 	export default {
 		components: {
-			commonList,
+			topicList,
 			loadMore
 		},
 		data() {

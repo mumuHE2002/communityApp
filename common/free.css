@@ -314,8 +314,10 @@
 .bg-hover-dark { background-color: #1d2124;}
 .bg-white { background-color: #ffffff;}
 .bg-transparent { background-color: transparent;}
+.bg-gray{background-color: #f5f4f2;}
 /* 边框 */
 .border { border-width: 1rpx;border-style: solid;border-color: #dee2e6;}
+.border-gray{border: 1rpx solid #e7e6e2;}
 .border-top {
   border-top-width: 1rpx;
   border-top-style: solid;
@@ -353,6 +355,7 @@
 .border-white {border-color: #FFFFFF;}
 /* 圆角 */
 .rounded { border-radius: 8rpx;}
+.rounded-md { border-radius: 16rpx;}
 .rounded-top {
   border-top-left-radius: 8rpx;
   border-top-right-radius: 8rpx;
