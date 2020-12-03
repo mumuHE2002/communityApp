@@ -89,6 +89,21 @@
             }
             
         }
+        ,{
+            "path" : "pages/topic-detail/topic-detail",
+            "style" :                                                                                    
+            {
+                "app-plus":{
+									"titleNView":{
+										"type":"transparent",
+										"buttons":[{
+											"type":"menu"
+										}]
+									}
+								}
+            }
+            
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
@@ -124,15 +139,6 @@
 					"iconPath":"static/tabbar/homeed.png",
 					"selectedIconPath":"static/tabbar/home.png"
 				}
-		]
-	},
-	"condition":{
-		"current":0,
-		"list":[
-			{
-				"name":"添加",
-				"path":"pages/add-input/add-input"
-			}
 		]
 	}
 }

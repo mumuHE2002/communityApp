@@ -48,7 +48,7 @@
 						<!-- 最近更新 -->
 						<view class="font-md px-2 py-3">最近更新</view>
 						<block v-for="(item,index) in topicList" :key="index">
-							<topic-list :item='item' :index='index'></topic-list>
+							<topic-list :item='item' :index='index' @openTopic='openTopic'></topic-list>
 						</block>
 					</view>
 				</scroll-view>
@@ -235,6 +235,11 @@
 			openMore() {
 				console.log(123)
 				uni.navigateTo({url:"/pages/topic-nav/topic-nav"})
+			},
+			
+			/* 打开话题详情 */
+			openTopic(e) {
+				uni.navigateTo({url:"/pages/topic-detail/topic-detail?detail="+JSON.stringify(e)})
 			},
 			
 			/* 打开发布页面 */

@@ -1,5 +1,5 @@
 <template>
-	<view class="flex align-center px-2 mb-1">
+	<view class="flex align-center px-2 mb-1" @click="openTopic(item)">
 		<image :src="item.cover" style="width: 150rpx;height: 150rpx;"
 		class="rounded mr-2"></image>
 		<view class="flex flex-column">
@@ -18,6 +18,11 @@
 		props:{
 			item:Object,
 			index:Number
+		},
+		methods:{
+			openTopic(item) {
+				this.$emit('openTopic',item)
+			}
 		}
 	}
 </script>
