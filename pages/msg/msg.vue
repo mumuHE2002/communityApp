@@ -10,6 +10,18 @@
 			<no-thing></no-thing>
 		</template>
 		
+		<uni-popup type="top" ref="popup">
+			<view class="bg-white ">
+				<view class="flex-center border-bottom font-md py-2"
+				hover-class="bg-light" @click="popupEvent('friend')">
+					<text class="iconfont icon-sousuo mr-2"></text> 搜索好友
+				</view>
+				<view class="flex-center font-md py-2" hover-class="bg-light"
+				@click="popupEvent('clear')">
+					<text class="iconfont icon-qingchu mr-2 "></text> 清楚列表
+				</view>
+			</view>
+		</uni-popup>
 	</view>
 </template>
 
@@ -35,10 +47,12 @@
 				}]
 	import msgList from '@/components/msg/msg-list.vue'
 	import noThing from '@/components/common/no-thing.vue'
+	import uniPopup from '@/components/uni-components/uni-popup/uni-popup.vue'
 	export default {
 		components:{
 			msgList,
-			noThing
+			noThing,
+			uniPopup
 		},
 		data() {
 			return {
@@ -56,11 +70,36 @@
 					//停止下拉刷新状态
 					uni.stopPullDownRefresh()
 				},2000)
+			},
+			
+			//弹出层点击事件
+			popupEvent(e) {
+				switch (e) {
+					case 'friend':
+						console.log('添加好友')
+						break
+					case 'clear':
+						console.log('清楚列表')
+						break
+				}
+				//关闭弹出层
+				this.$refs.popup.close()
 			}
 		},
 		//监听下拉刷新
 		onPullDownRefresh() {
 			this.refresh()
+		},
+		//监听原生导航按钮
+		onNavigationBarButtonTap(e) {
+			switch (e.index) {
+				case 0:  //左边
+					this.$refs.popup.close()
+					break
+				case 1:
+					this.$refs.popup.open()
+					break
+			}
 		},
 	}
 </script>
