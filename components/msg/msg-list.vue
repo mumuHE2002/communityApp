@@ -1,5 +1,6 @@
 <template>
-	<view class="py-2 mx-2 flex align-center border-bottom border-light-secondary" hover-class="bg-light">
+	<view class="py-2 mx-2 flex align-center border-bottom border-light-secondary" hover-class="bg-light"
+	@click="open">
 		<image :src="item.avatar" class="rounded-circle mr-2" style="width: 80rpx;height: 80rpx;"></image>
 		<view class="flex flex-column flex-1">
 			<view class="flex align-center justify-between">
@@ -31,6 +32,13 @@
 				return $T.gettime(value)
 			}
 		},
+		methods:{
+			open() {
+				uni.navigateTo({
+					url:'/pages/user-chat/user-chat'
+				})
+			}
+		}
 	}
 </script>
 

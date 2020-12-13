@@ -44,7 +44,8 @@
 					updateTime:1607068250,
 					data:"s啊速度京东方呼呼呼呼回复对方",
 					noread:99
-				}]
+				}];
+				
 	import msgList from '@/components/msg/msg-list.vue'
 	import noThing from '@/components/common/no-thing.vue'
 	import uniPopup from '@/components/uni-components/uni-popup/uni-popup.vue'

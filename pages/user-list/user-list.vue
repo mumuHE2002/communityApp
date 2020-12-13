@@ -136,6 +136,7 @@
 			//获取可使用高度
 			this.$nextTick(function() {
 				const query = uni.createSelectorQuery().in(this);
+				//获取元素的高度
 				query.select('#editor').boundingClientRect(data => {
 					//使用可用页面减去 导航高度
 					this.schoolH = uni.getSystemInfoSync().windowHeight - data.height
