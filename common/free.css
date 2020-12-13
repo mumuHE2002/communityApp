@@ -91,6 +91,7 @@
 .justify-end{justify-content:flex-end;}
 .justify-between{justify-content:space-between;}
 .justify-center{justify-content:center;}
+.justify-around{justify-content: space-around;}
 .align-center{ align-items: center; }
 .align-stretch{ align-items: stretch; }
 .align-start{ align-items: flex-start; }
@@ -372,7 +373,7 @@
   border-top-left-radius: 8rpx;
   border-bottom-left-radius: 8rpx;
  }
-.rounded-circle { border-radius: 100rpx;}
+.rounded-circle { border-radius: 100%;}
 .rounded-0 { border-radius: 0;}
 /* 显示 */
 /* #ifndef APP-PLUS-NVUE */

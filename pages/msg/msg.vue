@@ -94,6 +94,7 @@
 		onNavigationBarButtonTap(e) {
 			switch (e.index) {
 				case 0:  //左边
+					uni.navigateTo({url:'/pages/user-list/user-list'})
 					this.$refs.popup.close()
 					break
 				case 1:
