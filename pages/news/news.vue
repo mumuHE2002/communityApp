@@ -30,7 +30,8 @@
 						<hot-cate :hotCate="hotCate" @openMore='openMore'></hot-cate>
 						<!-- 搜索话题 -->
 						<view class="p-2">
-							<view class="flex-center bg-gray text-secondary py-2 rounded">
+							<view class="flex-center bg-gray text-secondary py-2 rounded"
+							@click="openSearch">
 								<text class="iconfont icon-sousuo"></text>
 								搜索话题
 							</view>
@@ -245,6 +246,13 @@
 			/* 打开发布页面 */
 			openAddInput() {
 				uni.navigateTo({url:'/pages/add-input/add-input'})
+			},
+			
+			/* 打开搜索页 */
+			openSearch(){
+				uni.navigateTo({
+					url:"/pages/search/search?type=topic"
+				})
 			}
 		}
 	}

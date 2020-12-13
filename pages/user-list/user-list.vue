@@ -15,7 +15,7 @@
 
 						<template v-if="item.list.length > 0">
 							<block v-for="(friend,f_index) in item.list" :key='f_index'>
-								<user-list :friend='friend' :index='f_index'></user-list>
+								<user-list :item='friend' :index='f_index'></user-list>
 							</block>
 							<load-more v-if="item.list.length > 10" :loadmore='item.loadmore'></load-more>
 						</template>
@@ -188,7 +188,7 @@
 		//监听点击输入框事件
 		onNavigationBarSearchInputClicked() {
 			uni.navigateTo({
-				url: "/pages/search/search"
+				url: "/pages/search/search?type=user"
 			})
 		},
 		//监听点击取消

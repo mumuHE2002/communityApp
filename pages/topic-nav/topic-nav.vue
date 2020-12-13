@@ -64,7 +64,7 @@
 					desc:"我是描述",
 					today_count:0,
 					news_count:0
-				},]
+				}];
 
 
 	import topicList from '@/components/news/topic-list.vue'

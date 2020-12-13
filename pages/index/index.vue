@@ -217,9 +217,10 @@
 				})
 			}
 		},
+		//监听点击导航搜索框
 		onNavigationBarSearchInputClicked() {
 			uni.navigateTo({
-				url:"/pages/search/search"
+				url:"/pages/search/search?type=post"
 			})
 		},
 		onNavigationBarButtonTap() {
