@@ -17,13 +17,14 @@
 		</scroll-view>
 
 		<!-- 底部操作条 -->
-		<view id="a" class="fixed-bottom flex align-center border-top border-light bg-white" style="height: 100rpx;">
+		<bottom-input @submit='submit'></bottom-input>
+<!-- 		<view id="a" class="fixed-bottom flex align-center border-top border-light bg-white" style="height: 100rpx;">
 			<input class="flex-1 bg-light rounded ml-2 py-1 px-2 font" 
 			type="text" placeholder="文明发言" v-model="content" @confirm='submit'/>
 			<view class="iconfont icon-fabu font-lg flex-center animated" 
 			hover-class="jello text-main" style="width: 100rpx;"
 			@click="submit"></view>
-		</view>
+		</view> -->
 	</view>
 </template>
 
@@ -108,14 +109,15 @@
 	}]
 
 	import userChartList from '@/components/user-chat/user-chat-list.vue'
+	import bottomInput from '@/components/common/bottom-input.vue';
 	export default {
 		components: {
-			userChartList
+			userChartList,
+			bottomInput
 		},
 		data() {
 			return {
 				uid: 1,
-				content:"",
 				list: [],
 				scrollTnto:""
 			}
@@ -128,22 +130,20 @@
 		},
 		methods: {
 			//发送
-			submit() {
+			submit(data) {
 				let obj = {
 					user_id: 1,
 					avatar: "/static/demo/userpic/2.jpg",
 					username: "昵称",
 					type: "text",
-					data: this.content,
+					data: data,
 					create_time: (new Date()).getTime()
 				}
-				//判断是否输入内容
-				if(this.content !== '') {
+				
 					this.list.push(obj)
-					this.content = ''
 					//滚动底部
 					this.pageToBottom()
-				}
+				
 			},
 			
 			//滚动底部
