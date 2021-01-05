@@ -59,10 +59,10 @@
 			"path": "pages/my/my",
 			"style": {
 				"navigationBarTitleText": "我的",
-				"app-plus":{
-					"titleNView":{
-						"buttons":[{
-							"type":"menu"
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"type": "menu"
 						}]
 					}
 				}
@@ -164,9 +164,9 @@
 		}, {
 			"path": "pages/detail/detail",
 			"style": {
-				"app-plus":{
-					"titleNView":{
-						"buttons":[{
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
 							"color": "#333333",
 							"colorPressed": "#FD597C",
 							"float": "right",
@@ -178,16 +178,54 @@
 				}
 			}
 
+		}, {
+			"path": "pages/user-set/user-set",
+			"style": {
+				"navigationBarTitleText": "设置"
+			}
+
+		}, {
+			"path": "pages/user-password/user-password",
+			"style": {
+				"navigationBarTitleText": "修改密码"
+			}
+
+		}, {
+			"path": "pages/user-email/user-email",
+			"style": {
+				"navigationBarTitleText": "绑定邮箱",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/user-userinfo/user-userinfo",
+			"style": {
+				"navigationBarTitleText": "修改个人资料",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/user-feedback/user-feedback",
+			"style": {
+				"navigationBarTitleText": "意见反馈"
+			}
+
+		}, {
+			"path": "pages/about/about",
+			"style": {
+				"navigationBarTitleText": "关于社区"
+			}
+
+		}, {
+			"path": "pages/login/login",
+			"style": {
+				"app-plus":{
+					"titleNView":false
+				}
+			}
+
 		}
-	    ,{
-            "path" : "pages/user-set/user-set",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "设置"
-            }
-            
-        }
-    ],
+	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "社区交友",
@@ -228,6 +266,9 @@
 		"list": [{
 			"path": "pages/user-list/user-list",
 			"name": "好友列表页"
+		}, {
+			"path": "pages/user-userinfo/user-userinfo",
+			"name": "修改资料"
 		}]
 	}
 }

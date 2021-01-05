@@ -23,6 +23,7 @@
 						<text v-if="title" class="uni-list-item__content-title" :class="[ellipsis !== 0 && ellipsis <= 2 ? 'uni-ellipsis-' + ellipsis : '']">{{ title }}</text>
 						<text v-if="note" class="uni-list-item__content-note">{{ note }}</text>
 					</view>
+					<slot name="right"></slot>
 				</slot>
 				<slot name="footer">
 					<view v-if="rightText || showBadge || showSwitch" class="uni-list-item__extra" :class="{ 'flex--justify': direction === 'column' }">
@@ -32,7 +33,9 @@
 					</view>
 				</slot>
 			</view>
+			<slot name='right-icon'>
 			<uni-icons v-if="showArrow || link" :size="16" class="uni-icon-wrapper" color="#bbb" type="arrowright" />
+			</slot>
 		</view>
 		<!-- #ifdef APP-NVUE -->
 	</cell>
@@ -184,15 +187,8 @@
 		},
 		methods: {
 			onClick() {
-				if (this.to !== '') {
-					this.openPage();
-					return;
-				}
-				if (this.clickable || this.link) {
-					this.$emit('click', {
-						data: {}
-					});
-				}
+				this.$emit('click')
+
 			},
 			onSwitchChange(e) {
 				this.$emit('switchChange', e.detail);

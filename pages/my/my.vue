@@ -1,5 +1,6 @@
 <template>
 	<view>
+		<navigator url="../login/login">
 		<view class="flex align-center p-4" hover-class="bg-light" >
 			<image src="/static/demo/userpic/14.jpg" 
 			style="width: 100rpx;height: 100rpx;"
@@ -13,7 +14,7 @@
 			</view>
 			<text class="iconfont icon-jinru "></text>
 		</view>
-		
+		</navigator>
 		<view class="flex px-4">
 			<block v-for="(item,index) in myData" :key='index'>
 				<view class="flex-1 flex-center flex-column">
